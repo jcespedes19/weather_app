@@ -16,7 +16,8 @@ weatherForm.addEventListener('submit', (event) => {
         else{
             console.log(data.forecast)
             messageOne.textContent = 'Local time: ' + data.forecast.localTime + ', temperatura:  ' 
-            + data.forecast.temperature +'. Rain probality ' + (data.forecast.rain * 100)   + '%'
+            + data.forecast.temperature +'. Rain probality ' + (data.forecast.rain * 100)   + '%. Humidity is '+
+            data.forecast.humidity + '%'
             messageTwo.textContent = 'Location: ' + data.location
         }
     })

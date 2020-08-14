@@ -9,10 +9,12 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unabled to load location', undefined)
         }
         else {
+            console.log(body.current.humidity)
             callback(undefined, {
                 localTime: body.location.localtime,
                 temperature: body.current.temperature,
-                rain: body.current.precip
+                rain: body.current.precip,
+                humidity: body.current.humidity
             })
         }
     })
